@@ -1,4 +1,4 @@
-# LittleMeteo - App Previsioni Meteo
+# LittleMeteo - WebApp Previsioni Meteo
 
 Un'applicazione web semplice ed elegante per visualizzare il meteo di qualsiasi città in tempo reale.
 
