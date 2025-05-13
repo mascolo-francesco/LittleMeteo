@@ -1,0 +1,192 @@
+/* Reset base per tutti gli elementi */
+* {
+    margin: 0; /* Rimuove i margini predefiniti */
+    padding: 0; /* Rimuove i padding predefiniti */
+    box-sizing: border-box; /* Include padding e bordi nelle dimensioni degli elementi */
+    font-family: 'Arial', sans-serif; /* Imposta il font di default */
+  }
+  
+  /* Stile per il body della pagina */
+  body {
+    background: linear-gradient(135deg, #00b4d8, #48cae4); /* Sfondo con gradiente azzurro */
+    min-height: 100vh; /* Altezza minima pari all'altezza della viewport */
+    display: flex; /* Utilizza flexbox per il layout */
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    justify-content: center; /* Centra gli elementi verticalmente */
+    color: #333; /* Colore del testo principale */
+  }
+  
+  /* Contenitore principale dell'applicazione */
+  .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo bianco semi-trasparente */
+    border-radius: 20px; /* Angoli arrotondati */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Ombra per effetto profondità */
+    padding: 30px; /* Spaziatura interna */
+    width: 90%; /* Larghezza relativa al contenitore */
+    max-width: 480px; /* Larghezza massima fissa */
+    text-align: center; /* Testo centrato */
+    margin: 20px; /* Margine esterno */
+  }
+  
+  /* Stile per l'intestazione */
+  header {
+    margin-bottom: 30px; /* Margine inferiore */
+  }
+  
+  /* Stile per il titolo principale */
+  header h1 {
+    color: #023e8a; /* Colore blu scuro */
+    font-size: 2.5rem; /* Dimensione del font */
+    margin-bottom: 10px; /* Margine inferiore */
+  }
+  
+  /* Stile per il sottotitolo */
+  header p {
+    color: #555; /* Colore grigio medio */
+    font-size: 1rem; /* Dimensione del font */
+  }
+  
+  /* Stile per il box di ricerca */
+  .search-box {
+    display: flex; /* Usa flexbox per disporre gli elementi */
+    justify-content: space-between; /* Distribuisce gli elementi nello spazio */
+    margin-bottom: 30px; /* Margine inferiore */
+  }
+  
+  /* Stile per il campo di input */
+  .search-box input {
+    flex: 1; /* Occupa tutto lo spazio disponibile */
+    padding: 12px 15px; /* Spaziatura interna */
+    border: none; /* Rimuove il bordo */
+    outline: none; /* Rimuove il contorno quando selezionato */
+    font-size: 1rem; /* Dimensione del font */
+    border-radius: 25px 0 0 25px; /* Arrotonda solo gli angoli sinistri */
+    background-color: #f1f1f1; /* Sfondo grigio chiaro */
+  }
+  
+  /* Stile per il pulsante di ricerca */
+  .search-box button {
+    border: none; /* Rimuove il bordo */
+    outline: none; /* Rimuove il contorno quando selezionato */
+    background-color: #0077b6; /* Sfondo blu */
+    color: white; /* Testo bianco */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    padding: 0 15px; /* Spaziatura interna */
+    border-radius: 0 25px 25px 0; /* Arrotonda solo gli angoli destri */
+    transition: background-color 0.3s; /* Animazione cambio colore */
+  }
+  
+  /* Effetto hover sul pulsante di ricerca */
+  .search-box button:hover {
+    background-color: #023e8a; /* Sfondo blu più scuro al passaggio del mouse */
+  }
+  
+  /* Contenitore delle informazioni meteo (inizialmente nascosto) */
+  .weather-container {
+    display: none; /* Nascosto all'inizio */
+    background-color: #f8f9fa; /* Sfondo grigio molto chiaro */
+    border-radius: 15px; /* Angoli arrotondati */
+    padding: 20px; /* Spaziatura interna */
+    margin-top: 20px; /* Margine superiore */
+  }
+  
+  /* Stile per il blocco di informazioni meteo */
+  .weather-info {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+  }
+  
+  /* Stile per il nome della città */
+  .city-name {
+    font-size: 1.8rem; /* Dimensione del font */
+    font-weight: bold; /* Font in grassetto */
+    color: #023e8a; /* Colore blu scuro */
+    margin-bottom: 10px; /* Margine inferiore */
+  }
+  
+  /* Stile per l'icona meteo */
+  .weather-icon {
+    width: 100px; /* Larghezza fissa */
+    height: 100px; /* Altezza fissa */
+    margin: 10px 0; /* Margine sopra e sotto */
+  }
+  
+  /* Stile per la temperatura */
+  .temperature {
+    font-size: 3rem; /* Dimensione grande del font */
+    font-weight: bold; /* Font in grassetto */
+    color: #0077b6; /* Colore blu */
+    margin: 10px 0; /* Margine sopra e sotto */
+  }
+  
+  /* Stile per la descrizione del meteo */
+  .weather-description {
+    font-size: 1.2rem; /* Dimensione del font */
+    color: #555; /* Colore grigio medio */
+    text-transform: capitalize; /* Prima lettera maiuscola */
+    margin-bottom: 10px; /* Margine inferiore */
+  }
+  
+  /* Stile per il container dei dettagli aggiuntivi */
+  .weather-details {
+    display: flex; /* Usa flexbox */
+    justify-content: space-around; /* Distribuisce lo spazio tra gli elementi */
+    width: 100%; /* Larghezza completa */
+    margin-top: 20px; /* Margine superiore */
+    padding-top: 20px; /* Spaziatura superiore */
+    border-top: 1px solid #ddd; /* Linea separatore sottile */
+  }
+  
+  /* Stile per i singoli dettagli meteo */
+  .detail {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+  }
+  
+  /* Stile per le icone dei dettagli */
+  .detail i {
+    font-size: 1.5rem; /* Dimensione del font */
+    color: #0077b6; /* Colore blu */
+    margin-bottom: 8px; /* Margine inferiore */
+  }
+  
+  /* Stile per i messaggi di errore (inizialmente nascosti) */
+  .error-message {
+    display: none; /* Nascosto all'inizio */
+    color: #d62828; /* Colore rosso */
+    margin-top: 20px; /* Margine superiore */
+    font-size: 1rem; /* Dimensione del font */
+  }
+  
+  /* Stile per il footer */
+  footer {
+    margin-top: 20px; /* Margine superiore */
+    color: white; /* Testo bianco */
+    text-align: center; /* Testo centrato */
+    padding: 10px; /* Spaziatura interna */
+    font-size: 0.9rem; /* Dimensione del font */
+  }
+  
+  /* Stile per l'icona cuore nel footer */
+  footer i {
+    color: #ff6b6b; /* Colore rosso chiaro */
+  }
+  
+  /* Media query per schermi piccoli (max 480px) */
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px; /* Riduce la spaziatura interna */
+    }
+    
+    header h1 {
+      font-size: 2rem; /* Riduce la dimensione del titolo */
+    }
+    
+    .weather-details {
+      flex-direction: column; /* Cambia disposizione a colonna */
+      gap: 15px; /* Aggiunge spazio tra gli elementi */
+    }
+  }

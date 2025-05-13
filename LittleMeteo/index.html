@@ -1,0 +1,51 @@
+<!-- Dichiarazione del tipo di documento HTML5 -->
+<!DOCTYPE html>
+<!-- Apertura del tag html con lingua italiana -->
+<html lang="it">
+<head>
+  <!-- Meta tag per la codifica dei caratteri UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Meta tag per rendere il sito responsive sui dispositivi mobili -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Titolo della pagina che appare nella scheda del browser -->
+  <title>LittleMeteo - Previsioni Meteo</title>
+  <!-- Collegamento al foglio di stile CSS personalizzato -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Collegamento alla libreria Font Awesome per le icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Contenitore principale dell'applicazione -->
+  <div class="container">
+    <!-- Intestazione con titolo e sottotitolo -->
+    <header>
+      <h1>LittleMeteo</h1>
+      <p>Controlla il meteo della tua città preferita</p>
+    </header>
+
+    <!-- Box di ricerca con input e pulsante -->
+    <div class="search-box">
+      <!-- Campo di input per inserire il nome della città -->
+      <input type="text" id="city-input" placeholder="Inserisci il nome di una città...">
+      <!-- Pulsante di ricerca con icona lente di ingrandimento -->
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Contenitore dove verranno visualizzati i dati meteo -->
+    <div class="weather-container" id="weather-container">
+      <!-- Qui verranno inseriti dinamicamente i dati meteo tramite JavaScript -->
+    </div>
+
+    <!-- Elemento per mostrare eventuali messaggi di errore -->
+    <div id="error-message" class="error-message"></div>
+  </div>
+
+  <!-- Piè di pagina con informazioni sul progetto -->
+  <footer>
+    <p>Realizzato con <i class="fas fa-heart"></i> | Mascolo Francesco, Mattheus Villanueva, Angelo Franco</p>
+  </footer>
+
+  <!-- Collegamento al file JavaScript che contiene la logica dell'applicazione -->
+  <script src="script.js"></script>
+</body>
+</html>
